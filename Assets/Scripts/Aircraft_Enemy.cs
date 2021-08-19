@@ -17,11 +17,14 @@ public class Aircraft_Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(gameObject, 8f);
         audio = GetComponent<AudioSource>();
         Vector3 tmp_pos_player = GameManager.instance.pos_Camera.transform.position;
         tmp_pos_player.y = transform.position.y;
         vec_heading = tmp_pos_player - transform.position;
         transform.LookAt(vec_heading);
+
+
     }
 
     // Update is called once per frame
