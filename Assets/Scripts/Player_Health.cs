@@ -27,7 +27,11 @@ public class Player_Health : MonoBehaviour
         {
             StartCoroutine(PlayAudioClips());
             hp -= 10;
-            if (hp <= 0) GameManager.instance.GameOver();
+            if (hp <= 0)
+            {
+                hp = 0;
+                GameManager.instance.GameOver();
+            }
             UIManager.instance.ChangePlayerHP(hp);
         }
     }
