@@ -10,8 +10,6 @@ public class Spawner : MonoBehaviour
 
     public float second_spawn_interval=3.5f;
     private float timer = 0f;
-     
-    // Start is called before the first frame update
 
     private void Update()
     {
@@ -23,11 +21,7 @@ public class Spawner : MonoBehaviour
             timer = 0f;
             Aircraft_Enemy tmp;
             tmp = Instantiate(prefab_aircraft, arr_pos[Random.Range(0, arr_pos.Length)].position, Quaternion.identity);
-            tmp = null;
-         
+            tmp = null;      
         }
-
     }
- 
-
 }

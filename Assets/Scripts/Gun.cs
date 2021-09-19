@@ -8,8 +8,6 @@ public class Gun : MonoBehaviour
     private Vector3 rotation_effect = new Vector3(0f, 0f, 15f);
     private AudioSource audio;
 
-
-
     private void Awake()
     {
         audio = GetComponent<AudioSource>();
@@ -19,8 +17,6 @@ public class Gun : MonoBehaviour
             tmp.Play();
             tmp.gameObject.SetActive(false);
         }
-
-
     }
 
     public void PlayEffect()
@@ -44,8 +40,5 @@ public class Gun : MonoBehaviour
             tmp.gameObject.SetActive(false);
         }
     }
-
-
-
 
 }

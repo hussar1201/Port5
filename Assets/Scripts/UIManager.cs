@@ -15,7 +15,6 @@ public class UIManager : MonoBehaviour
         private set;
     }
 
-
     private static UIManager m_instance;
     public static UIManager instance
     {
@@ -33,9 +32,7 @@ public class UIManager : MonoBehaviour
         if (instance != this) Destroy(this);
         score = 0;
         flag_menu_opened = false;
-
     }
-
 
     public void UploadScore(int add)
     {
@@ -49,26 +46,19 @@ public class UIManager : MonoBehaviour
         arr_UI_Text[1].text = "HP: " + hp;
     }
 
-
     public void SelectMenu()
     {
-
         flag_menu_opened = !flag_menu_opened;
-
         foreach (GameObject tmp in Menu_Option)
         {
             tmp.gameObject.SetActive(flag_menu_opened);
             tmp.gameObject.SetActive(flag_menu_opened);
         }
-
     }
 
     public void ActiveGameOverMenu()
     {
         Menu_GameOver.gameObject.SetActive(true);
     }
-
-
-
 
 }

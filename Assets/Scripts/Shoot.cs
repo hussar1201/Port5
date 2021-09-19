@@ -12,7 +12,6 @@ public class Shoot : MonoBehaviour
     private float timer = 0f;
     private bool flag_btn_down = false;
 
-
     private void Update()
     {
         if (GameManager.instance.flag_gameover || UIManager.instance.flag_menu_opened) return;
@@ -22,7 +21,6 @@ public class Shoot : MonoBehaviour
         if (timer >= time_for_interval && flag_btn_down)
         {
             timer = 0f;
-
             RaycastHit hit;
             Debug.Log("Shooting");
             gun.PlayEffect();
@@ -36,27 +34,17 @@ public class Shoot : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void OnFireBtnDown()
     {
-        if (GameManager.instance.flag_gameover || UIManager.instance.flag_menu_opened) return;
-        Debug.Log("Downed");
-
+        if (GameManager.instance.flag_gameover || UIManager.instance.flag_menu_opened) return;     
         flag_btn_down = true;
     }
 
     public void OnFireBtnUp()
     {
-        if (GameManager.instance.flag_gameover || UIManager.instance.flag_menu_opened) return;
-        Debug.Log("UP");
+        if (GameManager.instance.flag_gameover || UIManager.instance.flag_menu_opened) return;       
         flag_btn_down = false;
     }
-
-
-
-
-
-
 }
